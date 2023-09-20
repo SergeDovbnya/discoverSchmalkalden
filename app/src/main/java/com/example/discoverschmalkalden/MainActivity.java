@@ -18,14 +18,9 @@ public class MainActivity extends AppCompatActivity {
         ImageView menuIcon = findViewById(R.id.menuIcon);
         ImageView logoIcon = findViewById(R.id.schmalkaldenLogo);
         ImageView searchIcon = findViewById(R.id.searchIcon);
-        ImageView categoryIcon = findViewById(R.id.categoryIcon);
-        ImageButton hikingButton = findViewById(R.id.imageButton);
-        ImageView events = findViewById(R.id.eventIconView);
-        ImageView food = findViewById(R.id.foodIconView);
-        ImageView recommendedPlace = findViewById(R.id.recommendedPlaceIcon);
-        ImageView recommendedPlace1 = findViewById(R.id.recommendedPlace1);
-        ImageView recommendedPlace2 = findViewById(R.id.recommendedPlace2);
-        ImageView recommendedPlace3 = findViewById(R.id.recommendedPlace3);
+        ImageButton hikingButton = findViewById(R.id.hikingButton);
+        ImageButton events = findViewById(R.id.eventButton);
+        ImageButton food = findViewById(R.id.foodButton);
 
 
         hikingButton.setOnClickListener(view -> {

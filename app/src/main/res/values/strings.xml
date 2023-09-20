@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">discoverSchmalkalden</string>
     <string name="schmalkalden">Schmalkalden</string>
+    <string name="hiking">Hiking</string>
+    <string name="category">Category</string>
+    <string name="events">Events</string>
+    <string name="food">Food</string>
+    <string name="_186">$186</string>
+    <string name="_256" />
+    <string name="_225">225</string>
+    <string name="_9am_07pm">9am_07pm</string>
+    <string name="description_item1">Rhönblick is a municipality in the Rhön in the Schmalkalden-Meiningen district in the Franconian south of Thuringia . Its head office is located in the Helmershausen district.Its head office is located in the Helmershausen district.There were witch hunts in the districts of Bettenhausen, Hermannsfeld, Seeba and Stedtlingen from 1603 to 1681 . In total , 41 people were accused and 21 were executed in these witch trials.
+The municipality of Rhönblick was formed on August 1, 1996 by decree of the Interior Minister of Thuringia.The communities of Gerthausen, Helmershausen and Wohlmuthausen were previously merged into the Rhönblick administrative community.On November 2, 2014, Christoph Friedrich was elected as the new mayor of the municipality of Rhönblick with 84.1% of the valid votes. The voter turnout was 37.4%.</string>
+    <string name="description_item2">"Brotterode-Trusetal is located in the north of the Schmalkalden-Meiningen district in the Thuringian Forest on the upper reaches of the Truse . In the north, the border of the city is also the border of the Schmalkalden-Meiningen district and the Gotha district , in the east the municipality of Floh-Seligenthal borders the urban area, and in the south the municipalities of Fambach and Breitungen/Werra . In the west, the city's borders are also the border of the Schmalkalden-Meiningen district and the Wartburg district. The Rennsteig marks the northern boundary of Brotterode , and along its course you come to the Beerberggrotte, it is located on the western slope of the Beerbergstein .</string>
+    <string name="recommended_places">Recommended places</string>
 </resources>
