@@ -6,19 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".PageOfTypeActivity">
 
-    <ImageView
-        android:id="@+id/hikingplace1"
-        android:layout_width="379dp"
-        android:layout_height="379dp"
-        android:layout_marginTop="86dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hiking1" />
+
 
     <ImageView
         android:id="@+id/hiking_background"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="78dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -35,16 +27,37 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:elevation="@dimen/cardview_default_elevation"
         app:srcCompat="@drawable/hiking_logo" />
 
-    <ImageView
-        android:id="@+id/hikingPlace2"
-        android:layout_width="379dp"
-        android:layout_height="379dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVPlace"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hikingplace1"
-        app:srcCompat="@drawable/hiking2" />
+        app:layout_constraintTop_toBottomOf="@+id/hiking_background"/>
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:clipToPadding="false"-->
+<!--        android:overScrollMode="never"-->
+<!--        android:scrollbars="none"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/hiking_background">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <include layout="@layout/type_item_card" />-->
+<!--            <include layout="@layout/type_item_card" />-->
+
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

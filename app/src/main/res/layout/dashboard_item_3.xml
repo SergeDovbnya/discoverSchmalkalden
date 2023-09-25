@@ -36,10 +36,10 @@
                     android:layout_height="112dp">
 
                     <ImageView
-                        android:id="@+id/BrotterodeTrusetal"
+                        android:id="@+id/FlohSeligenthal"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:src="@drawable/trusetalerwasserfall"
+                        android:src="@drawable/floh_seligenthal"
                         app:layout_constraintDimensionRatio="H,1:1"
                         android:scaleType="centerCrop"
                         android:adjustViewBounds="true"
@@ -63,7 +63,7 @@
                         android:layout_weight=".3"
                         android:fontFamily="@font/rubik"
                         android:maxLines="2"
-                        android:text="Brotterode-Trusetal"
+                        android:text="Floh-Seligenthal"
                         android:textColor="@color/primary_text"
                         android:textSize="18sp" />
 
@@ -75,8 +75,7 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/rubik"
                         android:maxLines="3"
-                        android:text="@string/description_item2"
-
+                        android:text="@string/description_item3"
                         android:textColor="@color/secondary_text"
                         android:textSize="13dp" />
 
@@ -103,7 +102,7 @@
                             android:layout_marginTop="4dp"
                             android:layout_marginLeft="4dp"
                             android:fontFamily="@font/rubik"
-                            android:text="14 km"
+                            android:text="6 km"
                             android:textColor="@color/secondary_text"
                             android:textSize="13sp"
                             app:layout_constraintBottom_toBottomOf="parent"
