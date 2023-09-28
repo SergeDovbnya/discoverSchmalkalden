@@ -13,11 +13,13 @@ import java.util.ArrayList;
 public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder>{
     private final Context context;
     private final ArrayList<PlaceModel> placeModelArrayList;
+    private final OnItemsClickListener listener;
 
     // Constructor
-    public PlaceAdapter(Context context, ArrayList<PlaceModel> placeModelArrayList) {
+    public PlaceAdapter(Context context, ArrayList<PlaceModel> placeModelArrayList, OnItemsClickListener listener) {
         this.context = context;
         this.placeModelArrayList = placeModelArrayList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -25,16 +27,18 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder>{
     public PlaceAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // to inflate the layout for each item of recycler view.
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.type_item_card, parent, false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, listener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PlaceAdapter.ViewHolder holder, int position) {
         // to set data to textview and imageview of each card layout
+        final int index = holder.getAdapterPosition();
         PlaceModel model = placeModelArrayList.get(position);
         holder.placeNameTV.setText(model.getPlace_name());
         holder.placeDistanceTV.setText("" + model.getPlace_distance() + " km away");
         holder.placeIV.setImageResource(model.getPlace_image());
+
     }
 
     @Override
@@ -49,11 +53,21 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder>{
         private final TextView placeNameTV;
         private final TextView placeDistanceTV;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView, OnItemsClickListener listener) {
             super(itemView);
             placeIV = itemView.findViewById(R.id.placePictureIW);
             placeNameTV = itemView.findViewById(R.id.placeNameTW);
             placeDistanceTV = itemView.findViewById(R.id.distanceAwayTW);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    if(listener != null) {
+                        int pos = getAdapterPosition();
+                        if (pos != RecyclerView.NO_POSITION) {
+                            listener.onItemClick(pos);
+                        }
+                    }
+                }
+            });
         }
     }
 }

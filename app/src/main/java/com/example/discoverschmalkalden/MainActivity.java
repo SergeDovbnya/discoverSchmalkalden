@@ -4,12 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,12 +19,20 @@ public class MainActivity extends AppCompatActivity {
 
         hikingButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, PageOfTypeActivity.class);
+            intent.putExtra("TYPE",1);
             startActivity(intent);
         });
 
         events.setOnClickListener(view -> {
-            Intent intent2 = new Intent(MainActivity.this, PlaceDescription.class);
+            Intent intent2 = new Intent(MainActivity.this, PageOfTypeActivity.class);
+            intent2.putExtra("TYPE",2);
             startActivity(intent2);
+        });
+
+        food.setOnClickListener(view -> {
+            Intent intent3 = new Intent(MainActivity.this, PageOfTypeActivity.class);
+            intent3.putExtra("TYPE",3);
+            startActivity(intent3);
         });
     }
 }

@@ -4,17 +4,17 @@ public class PlaceModel {
 
     private int place_id;
     private String place_name;
-    private String place_description;
+    private int place_description;
     private double place_lat;
     private double place_lng;
     private int place_distance;
     private int place_image;
 
     // Constructor
-    public PlaceModel(String place_name, int place_distance, int place_image) {
+    public PlaceModel(String place_name, int place_description, int place_distance, int place_image) {
         this.place_name = place_name;
         this.place_distance = place_distance;
-        //this.place_description = place_description;
+        this.place_description = place_description;
         //this.place_lat = place_lat;
         //this.place_lng = place_lng;
         this.place_image = place_image;
@@ -29,7 +29,7 @@ public class PlaceModel {
         this.place_name = place_name;
     }
 
-    public String getPlace_description() {
+    public int getPlace_description() {
         return place_description;
     }
 

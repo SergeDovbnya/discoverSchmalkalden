@@ -17,7 +17,7 @@
         android:theme="@style/Theme.DiscoverSchmalkalden"
         tools:targetApi="31">
         <activity
-            android:name=".PlaceDescription"
+            android:name=".PlaceDescriptionActivity"
             android:exported="true" />
         <activity
             android:name=".PageOfTypeActivity"
