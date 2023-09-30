@@ -44,11 +44,12 @@
                 android:text="@string/rh_nblick" />
 
             <TextView
+                android:autoLink="web"
                 android:id="@+id/place_description_detailed"
                 android:text="@string/description_item1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="12"
+                android:maxLines="24"
                 android:fontFamily="@font/rubik"
                 android:textColor="@color/secondary_text"
                 android:layout_marginLeft="24dp"

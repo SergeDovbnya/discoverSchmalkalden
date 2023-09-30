@@ -13,8 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class PlaceDescriptionActivity extends AppCompatActivity implements OnMapReadyCallback {
-
-    LatLng PlaceLatLng;
+    private LatLng placeLatLng;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +22,13 @@ public class PlaceDescriptionActivity extends AppCompatActivity implements OnMap
         ImageView placePicture = findViewById(R.id.place_picture_detailed);
         TextView placeName = findViewById(R.id.place_name_detailed);
         TextView placeDescription = findViewById(R.id.place_description_detailed);
-        LatLng placeCoordinates;
 
         CustomData cd = (CustomData) getIntent().getExtras().getSerializable(PageOfTypeActivity.OBJECT);
 
         placeName.setText("" + cd.getPlaceName());
         placeDescription.setText("" + getString(cd.getPlaceDescription()));
         placePicture.setImageResource(cd.getPlacePicture());
+        placeLatLng = new LatLng(cd.getPlaceLat(), cd.getPlaceLng());
 
         // Get a handle to the fragment and register the callback.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -40,8 +39,10 @@ public class PlaceDescriptionActivity extends AppCompatActivity implements OnMap
     // Get a handle to the GoogleMap object and display marker.
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        PlaceLatLng = new LatLng(50.72695191940359, 10.395809851823534);
-        googleMap.addMarker(new MarkerOptions().position(PlaceLatLng).title("Marker"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(PlaceLatLng, 15));
+        googleMap.getUiSettings().setZoomControlsEnabled(true);
+        googleMap.getUiSettings().setMapToolbarEnabled(true);
+        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        googleMap.addMarker(new MarkerOptions().position(placeLatLng).title("Marker"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(placeLatLng, 15));
     }
 }
